@@ -1,0 +1,163 @@
+/*
+=====
+GLOBALS
+=====
+*/
+
+html {
+  font-family: Dosis;
+  font-size: 16px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 10px;
+}
+
+.full_stack_container {
+  border-bottom: 1px solid lightgrey;
+}
+
+.languages_container {
+  border-top: 1px solid lightgrey;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/*
+=====
+NAV & FOOTER
+=====
+*/
+
+nav {
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: flex-end;
+  height: 2rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+footer {
+  border-top: 1px solid lightgrey;
+}
+
+/*
+=====
+FULL STACK CONTAINER
+=====
+*/
+
+.full_stack_container {
+  grid-row-start: 1;
+  grid-column: 2 / span 3;
+  display: flex;
+}
+
+.full_stack_container .about_full_stack {
+  display: flex;
+  grid-row-start: 1;
+}
+
+.full_stack_container .about_blurb {
+  margin-top: 1.8rem;
+  margin-left: 3rem;
+}
+
+.full_stack_container .about_full_stack h1 {
+  font-size: 3.5rem;
+}
+
+.full_stack_container .about_img {
+  margin-top: 4rem;
+  margin-left: 5rem;
+  background-image: url("images/me.jpg");
+  height: 200px;
+  width: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px 50px;
+  background-position: center;
+}
+
+/*
+=====
+PORTFOLIO CONTAINER
+=====
+*/
+
+.portfolio_container {
+  grid-row: 2;
+  grid-column: 2 / span 3;
+  display: flex;
+}
+
+.portfolio_container .project {
+  margin-left: 6.2rem;
+  margin-top: 1.6rem;
+}
+
+.portfolio_container .portfolio_title h2 {
+  font-size: 3rem;
+}
+
+.portfolio_container .project_img {
+  background-image: url("images/portfolio_one.png");
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.portfolio_container .project_img_two {
+  background-image: url("images/portfolio_two.png");
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*
+=====
+LANGUAGES CONTAINER
+=====
+*/
+
+.languages_container {
+  grid-row-start: 3;
+  grid-column: 2 / span 3;
+  display: flex;
+}
+
+.languages_title h2 {
+  font-size: 3rem;
+}
+
+.languages_container .language_name {
+  margin-left: 4rem;
+  margin-top: 1.6rem;
+}
+
+.languages_container .language_name img {
+  min-height: 40%;
+  min-width: 70%;
+}
+
+/*
+=====
+INTERACTIVITY
+=====
+*/
+
+h1, h2 {
+
+}
