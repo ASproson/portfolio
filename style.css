@@ -11,7 +11,7 @@ html {
 
 main {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 10px;
@@ -36,19 +36,23 @@ NAV & FOOTER
 */
 
 nav {
-  border-bottom: 1px solid lightgrey;
+  /* border-bottom: 1px solid lightgrey; */
   display: flex;
   justify-content: flex-end;
   height: 2rem;
+  font-size: 1.2rem;
 }
 
-nav a {
+nav a, footer a {
   margin-left: 1rem;
   margin-right: 2rem;
 }
 
 footer {
   border-top: 1px solid lightgrey;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*
@@ -59,7 +63,7 @@ FULL STACK CONTAINER
 
 .full_stack_container {
   grid-row-start: 1;
-  grid-column: 2 / span 3;
+  grid-column: 3 / span 7;
   display: flex;
 }
 
@@ -97,7 +101,7 @@ PORTFOLIO CONTAINER
 
 .portfolio_container {
   grid-row: 2;
-  grid-column: 2 / span 3;
+  grid-column: 3 / span 7;
   display: flex;
 }
 
@@ -116,6 +120,7 @@ PORTFOLIO CONTAINER
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .portfolio_container .project_img_two {
@@ -134,7 +139,7 @@ LANGUAGES CONTAINER
 
 .languages_container {
   grid-row-start: 3;
-  grid-column: 2 / span 3;
+  grid-column: 3 / span 7;
   display: flex;
 }
 
@@ -150,14 +155,4 @@ LANGUAGES CONTAINER
 .languages_container .language_name img {
   min-height: 40%;
   min-width: 70%;
-}
-
-/*
-=====
-INTERACTIVITY
-=====
-*/
-
-h1, h2 {
-
 }
