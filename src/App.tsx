@@ -4,25 +4,29 @@ const projects = [
   {
     id: 0,
     name: "Pixel Perfect",
-    description: "awdawd",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["React", "Tailwind"],
   },
   {
     id: 1,
     name: "AI Maze Solver",
-    description: "awdawd",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["Python", "AI", "DSA"],
   },
   {
     id: 2,
     name: "CLI Adventure Game",
-    description: "awdawd",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["Python", "Bash"],
   },
   {
     id: 3,
     name: "CRUD ToDos",
-    description: "awdawd",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["React", "Tailwind", "NodeJS", "MongoDB"],
   },
 ];
@@ -60,7 +64,7 @@ const Card = ({ name, description, tags }: CardProps) => {
           <Tag key={idx} tag={tag} />
         ))}
       </div>
-      <p>{description}</p>
+      <p className="px-4">{description}</p>
     </div>
   );
 };
