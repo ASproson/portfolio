@@ -33,7 +33,7 @@ const projects = [
 
 function App() {
   return (
-    <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 text-white">
+    <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 ">
       <HeroBanner />
       <div className="grid sm:grid-cols-2">
         {projects.map(({ id, name, description, tags }) => {
@@ -58,7 +58,7 @@ interface CardProps {
 
 const Card = ({ name, description, tags }: CardProps) => {
   return (
-    <div className="text-white">
+    <div className="">
       <h1 className="text-center">{name}</h1>
       <div className="flex space-x-2 justify-center my-2">
         {tags.map((tag, idx) => (
@@ -85,21 +85,36 @@ interface TagProps {
 const Tag = ({ tag }: TagProps) => {
   return (
     <div className="bg-cyan-500 rounded-xl px-3">
-      <p className="py-1">{tag}</p>
+      <p className="py-1 text-white">{tag}</p>
     </div>
   );
 };
 
 const HeroBanner = () => {
   return (
-    <div className="px-4">
-      <h1 className="text-center">Hello there! I'm Anthony!</h1>
-      <h2 className="text-center">
-        I'm a full stack developer from the United Kingdom, and I have worked
-        for the British Government, Rolls-Royce Aerospace, AstraZeneca, and
-        SquaredUp.
-      </h2>
-      <h2>Projects</h2>
+    <div className="px-4 pt-10">
+      <h1 className="pb-4 text-2xl">Hello there, I'm Anthony! 👋</h1>
+      <p>I'm a fullstack developer and have worked for:</p>
+      <br />
+      <ul className="px-4">
+        <li>🏢 The British Government</li>
+        <li>🛫 Rolls-Royce Aerospace</li>
+        <li>🔬 AstraZeneca</li>
+        <li>📶 SquaredUp</li>
+      </ul>
+
+      <p className="pt-4">
+        You can find more details on my{" "}
+        <a
+          href="https://www.linkedin.com/in/asproson/"
+          target="_blank"
+          className="text-blue-400"
+        >
+          LinkedIn
+        </a>
+      </p>
+
+      <h2 className="py-4 text-2xl">Projects</h2>
     </div>
   );
 };
