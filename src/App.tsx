@@ -93,31 +93,33 @@ interface Links {
 
 const Card = ({ name, description, tags, links }: CardProps) => {
   return (
-    <div className="">
-      <h1 className="text-center">{name}</h1>
-      <div className="flex space-x-2 justify-center my-2">
-        {tags.map((tag, idx) => (
-          <Tag key={idx} tag={tag} />
-        ))}
-      </div>
-      <div className="px-4">
-        <div className="border-2 border-red-500 h-48">
-          <a href="">
-            image
-            <img src="" alt="" />
-          </a>
-        </div>
-        <p>{description}</p>
-        <div className="flex justify-between my-6">
-          {links.map((link, idx) => (
-            <div key={idx}>
-              <Button name="GitHub" link={link.github} />
-              {link.deployment && (
-                <Button name="Deployment" link={link.deployment} />
-              )}
-            </div>
+    <div className="flex flex-col justify-between h-full">
+      <div>
+        <h1 className="text-center">{name}</h1>
+        <div className="flex space-x-2 justify-center my-2">
+          {tags.map((tag, idx) => (
+            <Tag key={idx} tag={tag} />
           ))}
         </div>
+        <div className="px-4">
+          <div className="border-2 border-red-500 h-48">
+            <a href="">
+              image
+              <img src="" alt="" />
+            </a>
+          </div>
+          <p>{description}</p>
+        </div>
+      </div>
+      <div className="flex justify-between my-6 px-4">
+        {links.map((link, idx) => (
+          <div key={idx}>
+            <Button name="GitHub" link={link.github} />
+            {link.deployment && (
+              <Button name="Deployment" link={link.deployment} />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
