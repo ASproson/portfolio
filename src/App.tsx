@@ -91,16 +91,42 @@ const Tag = ({ tag }: TagProps) => {
 };
 
 const HeroBanner = () => {
+  const employment = [
+    {
+      name: "🏢 The British Government",
+      link: "https://www.greatermanchester-ca.gov.uk/",
+    },
+    {
+      name: "🛫 Rolls-Royce Aerospace",
+      link: "https://www.rolls-royce.com/",
+    },
+    {
+      name: "🔬 AstraZeneca",
+      link: "https://www.astrazeneca.co.uk/",
+    },
+    {
+      name: "📶 SquaredUp",
+      link: "https://squaredup.com/",
+    },
+  ];
+
   return (
     <div className="px-4 pt-10">
       <h1 className="pb-4 text-2xl">Hello there, I'm Anthony! 👋</h1>
       <p>I'm a fullstack developer and have worked for:</p>
       <br />
       <ul className="px-4">
-        <li>🏢 The British Government</li>
-        <li>🛫 Rolls-Royce Aerospace</li>
-        <li>🔬 AstraZeneca</li>
-        <li>📶 SquaredUp</li>
+        {employment.map(({ name, link }) => (
+          <li key={name}>
+            <a
+              href={link}
+              target="_blank"
+              className="text-blue-400 hover:underline"
+            >
+              {name}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <p className="pt-4">
@@ -108,7 +134,7 @@ const HeroBanner = () => {
         <a
           href="https://www.linkedin.com/in/asproson/"
           target="_blank"
-          className="text-blue-400"
+          className="text-blue-400 hover:underline"
         >
           LinkedIn
         </a>
