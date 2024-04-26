@@ -7,6 +7,12 @@ const projects = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["React", "Tailwind"],
+    links: [
+      {
+        github: "https://github.com/ASproson/pixel_perfect",
+        deployment: "",
+      },
+    ],
   },
   {
     id: 1,
@@ -14,6 +20,12 @@ const projects = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["Python", "AI", "DSA"],
+    links: [
+      {
+        github: "",
+        deployment: "",
+      },
+    ],
   },
   {
     id: 2,
@@ -21,6 +33,12 @@ const projects = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["Python", "Bash"],
+    links: [
+      {
+        github: "https://github.com/ASproson/zelda_cli_game",
+        deployment: "",
+      },
+    ],
   },
   {
     id: 3,
@@ -28,6 +46,12 @@ const projects = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
     tags: ["React", "Tailwind", "NodeJS", "MongoDB"],
+    links: [
+      {
+        github: "",
+        deployment: "",
+      },
+    ],
   },
 ];
 
@@ -36,10 +60,15 @@ function App() {
     <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 ">
       <HeroBanner />
       <div className="grid sm:grid-cols-2">
-        {projects.map(({ id, name, description, tags }) => {
+        {projects.map(({ id, name, description, tags, links }) => {
           return (
             <div key={id} className="rounded-sm border-gray-200 m-2 shadow-md">
-              <Card name={name} description={description} tags={tags} />
+              <Card
+                name={name}
+                description={description}
+                tags={tags}
+                links={links}
+              />
             </div>
           );
         })}
@@ -54,9 +83,15 @@ interface CardProps {
   name: string;
   description: string;
   tags: string[];
+  links: Links[];
 }
 
-const Card = ({ name, description, tags }: CardProps) => {
+interface Links {
+  github: string;
+  deployment: string;
+}
+
+const Card = ({ name, description, tags, links }: CardProps) => {
   return (
     <div className="">
       <h1 className="text-center">{name}</h1>
@@ -74,8 +109,14 @@ const Card = ({ name, description, tags }: CardProps) => {
         </div>
         <p>{description}</p>
         <div className="flex justify-between my-6">
-          <Button name="GitHub" />
-          <Button name="Deployment" />
+          {links.map((link) => (
+            <>
+              <Button name="GitHub" link={link.github} />
+              {link.deployment && (
+                <Button name="Deployment" link={link.deployment} />
+              )}
+            </>
+          ))}
         </div>
       </div>
     </div>
@@ -84,17 +125,20 @@ const Card = ({ name, description, tags }: CardProps) => {
 
 interface ButtonProps {
   name: string;
+  link: string;
 }
 
-const Button = ({ name }: ButtonProps) => {
+const Button = ({ name, link }: ButtonProps) => {
   return (
-    <button
-      className={`rounded-md p-2 hover:scale-110 transition ease-in-out ${
-        name === "GitHub" ? "bg-blue-500" : "bg-green-500"
-      }`}
-    >
-      {name}
-    </button>
+    <a href={link}>
+      <button
+        className={`rounded-md p-2 hover:scale-110 transition ease-in-out ${
+          name === "GitHub" ? "bg-blue-500" : "bg-green-500"
+        }`}
+      >
+        {name}
+      </button>
+    </a>
   );
 };
 
