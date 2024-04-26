@@ -92,8 +92,14 @@ const Tag = ({ tag }: TagProps) => {
 
 const HeroBanner = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
+    <div className="px-4">
+      <h1 className="text-center">Hello there! I'm Anthony!</h1>
+      <h2 className="text-center">
+        I'm a full stack developer from the United Kingdom, and I have worked
+        for the British Government, Rolls-Royce Aerospace, AstraZeneca, and
+        SquaredUp.
+      </h2>
+      <h2>Projects</h2>
     </div>
   );
 };
