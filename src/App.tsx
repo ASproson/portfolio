@@ -38,7 +38,7 @@ function App() {
       <div className="grid sm:grid-cols-2">
         {projects.map(({ id, name, description, tags }) => {
           return (
-            <div key={id} className="border-2 border-green-500">
+            <div key={id} className="rounded-sm border-gray-200 m-2 shadow-md">
               <Card name={name} description={description} tags={tags} />
             </div>
           );
