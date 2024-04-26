@@ -73,8 +73,28 @@ const Card = ({ name, description, tags }: CardProps) => {
           </a>
         </div>
         <p>{description}</p>
+        <div className="flex justify-between my-6">
+          <Button name="GitHub" />
+          <Button name="Deployment" />
+        </div>
       </div>
     </div>
+  );
+};
+
+interface ButtonProps {
+  name: string;
+}
+
+const Button = ({ name }: ButtonProps) => {
+  return (
+    <button
+      className={`rounded-md p-2 hover:scale-110 transition ease-in-out ${
+        name === "GitHub" ? "bg-blue-500" : "bg-green-500"
+      }`}
+    >
+      {name}
+    </button>
   );
 };
 
