@@ -151,7 +151,7 @@ interface TagProps {
 const Tag = ({ tag }: TagProps) => {
   return (
     <div className="bg-cyan-500 rounded-xl px-3">
-      <p className="py-1 text-white">{tag}</p>
+      <p className="py-1 text-white text-sm">{tag}</p>
     </div>
   );
 };
