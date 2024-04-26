@@ -65,9 +65,9 @@ const Card = ({ name, description, tags }: CardProps) => {
         ))}
       </div>
       <div className="px-4">
-        <div>
+        <div className="border-2 border-red-500 h-48">
           <a href="">
-            blank
+            image
             <img src="" alt="" />
           </a>
         </div>
