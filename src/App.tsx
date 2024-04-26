@@ -33,11 +33,12 @@ const projects = [
 
 function App() {
   return (
-    <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96">
+    <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 text-white">
+      <HeroBanner />
       <div className="grid sm:grid-cols-2">
         {projects.map(({ id, name, description, tags }) => {
           return (
-            <div key={id} className="text-white border-2 border-green-500">
+            <div key={id} className="border-2 border-green-500">
               <Card name={name} description={description} tags={tags} />
             </div>
           );
@@ -85,6 +86,14 @@ const Tag = ({ tag }: TagProps) => {
   return (
     <div className="bg-cyan-500 rounded-xl px-3">
       <p className="py-1">{tag}</p>
+    </div>
+  );
+};
+
+const HeroBanner = () => {
+  return (
+    <div>
+      <h1>Hello world</h1>
     </div>
   );
 };
