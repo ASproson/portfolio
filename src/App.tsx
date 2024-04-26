@@ -5,7 +5,7 @@ const projects = [
     id: 0,
     name: "Pixel Perfect",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
+      "Translates designs from Dribble into pixel perfect React Tailwind code (without access to Figma designs)",
     tags: ["React", "Tailwind"],
     links: [
       {
@@ -109,13 +109,13 @@ const Card = ({ name, description, tags, links }: CardProps) => {
         </div>
         <p>{description}</p>
         <div className="flex justify-between my-6">
-          {links.map((link) => (
-            <>
+          {links.map((link, idx) => (
+            <div key={idx}>
               <Button name="GitHub" link={link.github} />
               {link.deployment && (
                 <Button name="Deployment" link={link.deployment} />
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>
