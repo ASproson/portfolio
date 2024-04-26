@@ -64,13 +64,15 @@ const Card = ({ name, description, tags }: CardProps) => {
           <Tag key={idx} tag={tag} />
         ))}
       </div>
-      <div>
-        <a href="">
-          blank
-          <img src="" alt="" />
-        </a>
+      <div className="px-4">
+        <div>
+          <a href="">
+            blank
+            <img src="" alt="" />
+          </a>
+        </div>
+        <p>{description}</p>
       </div>
-      <p className="px-4">{description}</p>
     </div>
   );
 };
