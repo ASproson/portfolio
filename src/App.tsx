@@ -14,6 +14,7 @@ const projects = [
         deployment: "",
       },
     ],
+    img: "",
   },
   {
     id: 1,
@@ -27,6 +28,7 @@ const projects = [
         deployment: "",
       },
     ],
+    img: "",
   },
   {
     id: 2,
@@ -40,6 +42,7 @@ const projects = [
         deployment: "",
       },
     ],
+    img: zeldaCLI,
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ const projects = [
         deployment: "",
       },
     ],
+    img: "",
   },
 ];
 
@@ -61,7 +65,7 @@ function App() {
     <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 ">
       <HeroBanner />
       <div className="grid sm:grid-cols-2">
-        {projects.map(({ id, name, description, tags, links }) => {
+        {projects.map(({ id, name, description, tags, links, img }) => {
           return (
             <div key={id} className="rounded-sm border-gray-200 m-2 shadow-md">
               <Card
@@ -69,6 +73,7 @@ function App() {
                 description={description}
                 tags={tags}
                 links={links}
+                img={img}
               />
             </div>
           );
@@ -85,6 +90,7 @@ interface CardProps {
   description: string;
   tags: string[];
   links: Links[];
+  img: string;
 }
 
 interface Links {
@@ -92,7 +98,7 @@ interface Links {
   deployment: string;
 }
 
-const Card = ({ name, description, tags, links }: CardProps) => {
+const Card = ({ name, description, tags, links, img }: CardProps) => {
   return (
     <div className="flex flex-col justify-between h-full">
       <div>
@@ -104,12 +110,12 @@ const Card = ({ name, description, tags, links }: CardProps) => {
         </div>
         <div className="px-4">
           <div
-            className="border-2 border-red-500 h-48 relative"
+            className="h-48 relative rounded-sm"
             style={{ backgroundColor: "#1e1e1e" }}
           >
             <img
               className="absolute inset-0 w-full h-full object-contain"
-              src={zeldaCLI}
+              src={img}
               alt="Adventure game"
             />
           </div>
