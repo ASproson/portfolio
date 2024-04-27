@@ -1,4 +1,5 @@
 import "./App.css";
+import zeldaCLI from "./assets/cli.png";
 
 const projects = [
   {
@@ -31,7 +32,7 @@ const projects = [
     id: 2,
     name: "CLI Adventure Game",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
+      "An ASCII CLI dungeon crawler game with random enemy encounters, turn-based battles, items, and real-time map tracking",
     tags: ["Python", "Bash"],
     links: [
       {
@@ -102,11 +103,15 @@ const Card = ({ name, description, tags, links }: CardProps) => {
           ))}
         </div>
         <div className="px-4">
-          <div className="border-2 border-red-500 h-48">
-            <a href="">
-              image
-              <img src="" alt="" />
-            </a>
+          <div
+            className="border-2 border-red-500 h-48 relative"
+            style={{ backgroundColor: "#1e1e1e" }}
+          >
+            <img
+              className="absolute inset-0 w-full h-full object-contain"
+              src={zeldaCLI}
+              alt="Adventure game"
+            />
           </div>
           <p>{description}</p>
         </div>
