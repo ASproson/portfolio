@@ -107,9 +107,9 @@ interface Links {
 const Card = ({ name, description, tags, links, img, alt }: CardProps) => {
   return (
     <div className="flex flex-col justify-between h-full">
-      <div>
-        <h1 className="text-center">{name}</h1>
-        <div className="flex space-x-2 justify-center my-2">
+      <div className="mt-2">
+        <h1 className="text-center font-bold">{name}</h1>
+        <div className="flex space-x-2 justify-center my-3">
           {tags.map((tag, idx) => (
             <Tag key={idx} tag={tag} />
           ))}
@@ -125,7 +125,7 @@ const Card = ({ name, description, tags, links, img, alt }: CardProps) => {
               alt={alt}
             />
           </div>
-          <p>{description}</p>
+          <p className="mt-4">{description}</p>
         </div>
       </div>
       <div className="flex justify-between my-6 px-4">
