@@ -15,6 +15,7 @@ const projects = [
       },
     ],
     img: "",
+    alt: "",
   },
   {
     id: 1,
@@ -29,6 +30,7 @@ const projects = [
       },
     ],
     img: "",
+    alt: "",
   },
   {
     id: 2,
@@ -43,6 +45,7 @@ const projects = [
       },
     ],
     img: zeldaCLI,
+    alt: "CLI adventure game",
   },
   {
     id: 3,
@@ -57,6 +60,7 @@ const projects = [
       },
     ],
     img: "",
+    alt: "",
   },
 ];
 
@@ -65,7 +69,7 @@ function App() {
     <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 ">
       <HeroBanner />
       <div className="grid sm:grid-cols-2">
-        {projects.map(({ id, name, description, tags, links, img }) => {
+        {projects.map(({ id, name, description, tags, links, img, alt }) => {
           return (
             <div key={id} className="rounded-sm border-gray-200 m-2 shadow-md">
               <Card
@@ -74,6 +78,7 @@ function App() {
                 tags={tags}
                 links={links}
                 img={img}
+                alt={alt}
               />
             </div>
           );
@@ -91,6 +96,7 @@ interface CardProps {
   tags: string[];
   links: Links[];
   img: string;
+  alt: string;
 }
 
 interface Links {
@@ -98,7 +104,7 @@ interface Links {
   deployment: string;
 }
 
-const Card = ({ name, description, tags, links, img }: CardProps) => {
+const Card = ({ name, description, tags, links, img, alt }: CardProps) => {
   return (
     <div className="flex flex-col justify-between h-full">
       <div>
@@ -116,7 +122,7 @@ const Card = ({ name, description, tags, links, img }: CardProps) => {
             <img
               className="absolute inset-0 w-full h-full object-contain"
               src={img}
-              alt="Adventure game"
+              alt={alt}
             />
           </div>
           <p>{description}</p>
