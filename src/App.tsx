@@ -151,8 +151,8 @@ const Button = ({ name, link }: ButtonProps) => {
   return (
     <a href={link}>
       <button
-        className={`rounded-md p-2 hover:scale-110 transition ease-in-out ${
-          name === "GitHub" ? "bg-blue-500" : "bg-green-500"
+        className={`rounded-md p-2 hover:scale-110 transition ease-in-out text-gray-200 ${
+          name === "GitHub" ? "bg-black" : "bg-green-500"
         }`}
       >
         {name}
