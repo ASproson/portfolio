@@ -47,21 +47,21 @@ const projects = [
     img: zeldaCLI,
     alt: "CLI adventure game",
   },
-  {
-    id: 3,
-    name: "CRUD ToDos",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
-    tags: ["React", "Tailwind", "NodeJS", "MongoDB"],
-    links: [
-      {
-        github: "",
-        deployment: "",
-      },
-    ],
-    img: "",
-    alt: "",
-  },
+  // {
+  //   id: 3,
+  //   name: "CRUD ToDos",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
+  //   tags: ["React", "Tailwind", "NodeJS", "MongoDB"],
+  //   links: [
+  //     {
+  //       github: "",
+  //       deployment: "",
+  //     },
+  //   ],
+  //   img: "",
+  //   alt: "",
+  // },
   {
     id: 4,
     name: "6 Skill Points for Generals Mod",
@@ -74,7 +74,7 @@ const projects = [
         deployment: "",
       },
     ],
-    img: "",
+    img: "https://wiki.totalwar.com/images/e/e7/Shogun-2-home.jpg",
     alt: "",
   },
 ];
