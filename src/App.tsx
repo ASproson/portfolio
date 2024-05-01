@@ -83,23 +83,28 @@ const projects = [
 
 function App() {
   return (
-    <div className="grid grid-cols-1 lg:px-40 xl:px-72 2xl:px-96 ">
-      <HeroBanner />
-      <div className="grid sm:grid-cols-2">
-        {projects.map(({ id, name, description, tags, links, img, alt }) => {
-          return (
-            <div key={id} className="rounded-sm border-gray-200 m-2 shadow-md">
-              <Card
-                name={name}
-                description={description}
-                tags={tags}
-                links={links}
-                img={img}
-                alt={alt}
-              />
-            </div>
-          );
-        })}
+    <div className="flex justify-center">
+      <div className="grid grid-cols-1 max-w-[1200px]">
+        <HeroBanner />
+        <div className="grid sm:grid-cols-2">
+          {projects.map(({ id, name, description, tags, links, img, alt }) => {
+            return (
+              <div
+                key={id}
+                className="rounded-sm border-gray-200 m-2 shadow-md"
+              >
+                <Card
+                  name={name}
+                  description={description}
+                  tags={tags}
+                  links={links}
+                  img={img}
+                  alt={alt}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -192,7 +197,7 @@ const Tag = ({ tag }: TagProps) => {
 
 const HeroBanner = () => {
   return (
-    <div className="px-4 pt-10">
+    <div className="px-4 pt-10 text-center xl:text-left">
       <h1 className="pb-4 text-2xl">Hello there, I'm Anthony! 👋</h1>
       <p>I'm a fullstack developer and previously worked for:</p>
 
