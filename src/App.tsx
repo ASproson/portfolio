@@ -68,7 +68,7 @@ const projects = [
     id: 4,
     name: "6 Skill Points for Generals Mod",
     description:
-      "Skill point mod for Total War: Shogun 2 (released March 2011), including a walkthrough using modern operating systems and tools. This mod currently has over 1600 subscribers",
+      "Skill point mod for Total War: Shogun 2, including a walkthrough using modern operating systems and tools. This mod currently has over 1600 subscribers",
     tags: ["Assembly"],
     links: [
       {
@@ -198,11 +198,11 @@ const Tag = ({ tag }: TagProps) => {
 const HeroBanner = () => {
   return (
     <div className="px-4 pt-10 text-center xl:text-left">
-      <h1 className="pb-4 text-2xl">Hello there, I'm Anthony! 👋</h1>
+      <h1 className="py-4 text-3xl font-bold">Hello there, I'm Anthony! 👋</h1>
       <p>I'm a fullstack developer and previously worked for:</p>
 
       <Employment />
-      <p className="pt-4">
+      <p className="py-4">
         You can find more details on my{" "}
         <a
           href="https://www.linkedin.com/in/asproson/"
@@ -213,7 +213,7 @@ const HeroBanner = () => {
         </a>
       </p>
 
-      <h2 className="py-4 text-2xl">Projects</h2>
+      <h2 className="py-4 text-3xl font-bold">Projects</h2>
     </div>
   );
 };
