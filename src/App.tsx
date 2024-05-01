@@ -1,5 +1,7 @@
 import "./App.css";
 import zeldaCLI from "./assets/cli.png";
+import rrLogo from "./assets/rrlogo.png";
+import squp from "./assets/squp.png";
 
 const projects = [
   {
@@ -227,6 +229,7 @@ const HeroBanner = () => {
         ))}
       </ul>
 
+      <Employment />
       <p className="pt-4">
         You can find more details on my{" "}
         <a
@@ -239,6 +242,46 @@ const HeroBanner = () => {
       </p>
 
       <h2 className="py-4 text-2xl">Projects</h2>
+    </div>
+  );
+};
+
+const Employment = () => {
+  const employ = [
+    {
+      id: 0,
+      name: "🏢 The British Government",
+      link: "https://www.greatermanchester-ca.gov.uk/",
+      img: "https:upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Arms_of_the_City_of_Manchester.svg/1200px-Arms_of_the_City_of_Manchester.svg.png",
+    },
+    {
+      id: 1,
+      name: "🛫 Rolls-Royce Aerospace",
+      link: "https://www.rolls-royce.com/",
+      img: rrLogo,
+    },
+    {
+      id: 2,
+      name: "🔬 AstraZeneca",
+      link: "https://www.astrazeneca.co.uk/",
+      img: "https://1000logos.net/wp-content/uploads/2023/10/AstraZeneca-Logo.png",
+    },
+    {
+      id: 3,
+      name: "📶 SquaredUp",
+      link: "https://squaredup.com/",
+      img: squp,
+    },
+  ];
+
+  return (
+    <div>
+      <img src={employ[0].img} className="h-40" />
+      <img src={employ[1].img} className="h-40" />
+      <img src={employ[2].img} className="h-40" />
+      <img src={employ[3].img} className="h-10" />
+
+      <p>hello world</p>
     </div>
   );
 };
