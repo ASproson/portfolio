@@ -66,7 +66,7 @@ const projects = [
     id: 4,
     name: "6 Skill Points for Generals Mod",
     description:
-      "Skill point mod for Total War: Shogun 2 (released March 2011), including a walkthrough using modern operating systems and tools",
+      "Skill point mod for Total War: Shogun 2 (released March 2011), including a walkthrough using modern operating systems and tools. This mod currently has over 1600 subscribers",
     tags: ["Assembly"],
     links: [
       {
