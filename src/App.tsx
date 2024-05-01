@@ -62,6 +62,21 @@ const projects = [
     img: "",
     alt: "",
   },
+  {
+    id: 4,
+    name: "6 Skill Points for Generals Mod",
+    description:
+      "Skill point mod for Total War: Shogun 2 (released March 2011), including a walkthrough using modern operating systems and tools",
+    tags: ["Assembly"],
+    links: [
+      {
+        github: "https://github.com/ASproson/tw-shogun2-mod",
+        deployment: "",
+      },
+    ],
+    img: "",
+    alt: "",
+  },
 ];
 
 function App() {
@@ -149,7 +164,7 @@ interface ButtonProps {
 
 const Button = ({ name, link }: ButtonProps) => {
   return (
-    <a href={link}>
+    <a href={link} target="_blank">
       <button
         className={`rounded-md p-2 hover:scale-110 transition ease-in-out text-gray-200 ${
           name === "GitHub" ? "bg-black" : "bg-green-500"
