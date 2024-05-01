@@ -2,6 +2,7 @@ import "./App.css";
 import zeldaCLI from "./assets/cli.png";
 import rrLogo from "./assets/rrlogo.png";
 import squp from "./assets/squp.png";
+import gov from "./assets/gov.png";
 
 const projects = [
   {
@@ -191,43 +192,10 @@ const Tag = ({ tag }: TagProps) => {
 };
 
 const HeroBanner = () => {
-  const employment = [
-    {
-      name: "🏢 The British Government",
-      link: "https://www.greatermanchester-ca.gov.uk/",
-    },
-    {
-      name: "🛫 Rolls-Royce Aerospace",
-      link: "https://www.rolls-royce.com/",
-    },
-    {
-      name: "🔬 AstraZeneca",
-      link: "https://www.astrazeneca.co.uk/",
-    },
-    {
-      name: "📶 SquaredUp",
-      link: "https://squaredup.com/",
-    },
-  ];
-
   return (
     <div className="px-4 pt-10">
       <h1 className="pb-4 text-2xl">Hello there, I'm Anthony! 👋</h1>
-      <p>I'm a fullstack developer and have worked for:</p>
-      <br />
-      <ul className="px-4">
-        {employment.map(({ name, link }) => (
-          <li key={name}>
-            <a
-              href={link}
-              target="_blank"
-              className="text-blue-400 hover:underline"
-            >
-              {name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <p>I'm a fullstack developer and previously worked for:</p>
 
       <Employment />
       <p className="pt-4">
@@ -250,38 +218,47 @@ const Employment = () => {
   const employ = [
     {
       id: 0,
-      name: "🏢 The British Government",
+      name: "British Government",
       link: "https://www.greatermanchester-ca.gov.uk/",
-      img: "https:upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Arms_of_the_City_of_Manchester.svg/1200px-Arms_of_the_City_of_Manchester.svg.png",
+      img: gov,
+      style: "h-12 sm:h-20",
     },
     {
       id: 1,
-      name: "🛫 Rolls-Royce Aerospace",
+      name: "Rolls-Royce Aerospace",
       link: "https://www.rolls-royce.com/",
       img: rrLogo,
+      style: "h-24 sm:h-32 mt-1",
     },
     {
       id: 2,
-      name: "🔬 AstraZeneca",
+      name: "AstraZeneca",
       link: "https://www.astrazeneca.co.uk/",
       img: "https://1000logos.net/wp-content/uploads/2023/10/AstraZeneca-Logo.png",
+      style: "h-24 sm:h-32",
     },
     {
       id: 3,
-      name: "📶 SquaredUp",
+      name: "SquaredUp",
       link: "https://squaredup.com/",
       img: squp,
+      style: "h-7 sm:h-10 mt-5 ",
     },
   ];
 
   return (
-    <div>
-      <img src={employ[0].img} className="h-40" />
-      <img src={employ[1].img} className="h-40" />
-      <img src={employ[2].img} className="h-40" />
-      <img src={employ[3].img} className="h-10" />
-
-      <p>hello world</p>
+    <div className="my-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 text-center">
+        {employ.map(({ id, name, link, img, style }) => {
+          return (
+            <div key={id} className="flex justify-center h-20 items-center">
+              <a href={link} target="_blank">
+                <img src={img} className={style} alt={name} />
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
