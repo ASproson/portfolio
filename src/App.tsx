@@ -1,6 +1,5 @@
 import "./App.css";
 import zeldaCLI from "./assets/cli.png";
-import rrLogo from "./assets/rrlogo.png";
 import squp from "./assets/squp.png";
 import gov from "./assets/gov.png";
 
@@ -221,14 +220,14 @@ const Employment = () => {
       name: "British Government",
       link: "https://www.greatermanchester-ca.gov.uk/",
       img: gov,
-      style: "h-12 sm:h-20",
+      style: "h-12 sm:h-20 ",
     },
     {
       id: 1,
       name: "Rolls-Royce Aerospace",
       link: "https://www.rolls-royce.com/",
-      img: rrLogo,
-      style: "h-24 sm:h-32 mt-1",
+      img: "https://i0.wp.com/interengineeringlgbt.com/wp-content/uploads/2018/04/Rolls-Royce-Logo-Blue-RGB.png?ssl=1",
+      style: "h-9 sm:h-12 mt-6",
     },
     {
       id: 2,
