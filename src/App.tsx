@@ -3,6 +3,7 @@ import zeldaCLI from "./assets/cli.png";
 import squp from "./assets/squp.png";
 import gov from "./assets/gov.png";
 import fox from "./assets/fox.png";
+import maze from "./assets/maze.gif";
 
 const projects = [
   {
@@ -32,7 +33,7 @@ const projects = [
         deployment: "",
       },
     ],
-    img: "https://private-user-images.githubusercontent.com/77736272/328935257-19a8a712-554d-439f-9e1d-00ac795d10e4.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTUyNDU4MDIsIm5iZiI6MTcxNTI0NTUwMiwicGF0aCI6Ii83NzczNjI3Mi8zMjg5MzUyNTctMTlhOGE3MTItNTU0ZC00MzlmLTllMWQtMDBhYzc5NWQxMGU0LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTA5VDA5MDUwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjNmMxZDM1MzE0ZDY3ZjMyMDkwYWRhZjZhOWQzMTNmOWRkMmM0ZjJhYjMzNWU0YWFkNzRiYmFjNzU1NjBhNjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.pZQQ5PZm6IQGfMxm3uwp-7hrAk-wq07K2TKq3tbirOc",
+    img: maze,
     alt: "",
   },
   {
