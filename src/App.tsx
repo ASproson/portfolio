@@ -23,8 +23,8 @@ const projects = [
     id: 1,
     name: "DFS Maze Solver",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
-    tags: ["Python", "DSA"],
+      "Depth first search algorithm that solves a procedurally generated maze of any size",
+    tags: ["Python", "DSA", "Tkinter"],
     links: [
       {
         github: "https://github.com/ASproson/maze_solver",
