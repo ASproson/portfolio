@@ -21,17 +21,17 @@ const projects = [
   },
   {
     id: 1,
-    name: "AI Maze Solver",
+    name: "DFS Maze Solver",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ratione veniam consequatur inventore nulla non! Praesentium at optio, fugit dolorum quas molestiae dignissimos unde voluptates reiciendis libero amet doloremque alias!",
-    tags: ["Python", "AI", "DSA"],
+    tags: ["Python", "DSA"],
     links: [
       {
-        github: "",
+        github: "https://github.com/ASproson/maze_solver",
         deployment: "",
       },
     ],
-    img: "",
+    img: "https://private-user-images.githubusercontent.com/77736272/328935257-19a8a712-554d-439f-9e1d-00ac795d10e4.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTUyNDU4MDIsIm5iZiI6MTcxNTI0NTUwMiwicGF0aCI6Ii83NzczNjI3Mi8zMjg5MzUyNTctMTlhOGE3MTItNTU0ZC00MzlmLTllMWQtMDBhYzc5NWQxMGU0LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTA5VDA5MDUwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjNmMxZDM1MzE0ZDY3ZjMyMDkwYWRhZjZhOWQzMTNmOWRkMmM0ZjJhYjMzNWU0YWFkNzRiYmFjNzU1NjBhNjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.pZQQ5PZm6IQGfMxm3uwp-7hrAk-wq07K2TKq3tbirOc",
     alt: "",
   },
   {
