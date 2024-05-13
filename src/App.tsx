@@ -2,7 +2,7 @@ import "./App.css";
 import zeldaCLI from "./assets/cli.png";
 import squp from "./assets/squp.png";
 import gov from "./assets/gov.png";
-import fox from "./assets/fox.png";
+import valorant from "./assets/valorant.png";
 import maze from "./assets/maze.gif";
 
 const projects = [
@@ -18,7 +18,7 @@ const projects = [
         deployment: "",
       },
     ],
-    img: fox,
+    img: valorant,
     alt: "",
   },
   {
