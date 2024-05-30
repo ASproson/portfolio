@@ -14,8 +14,8 @@ const projects = [
     tags: ["React", "Tailwind"],
     links: [
       {
-        github: "https://github.com/ASproson/pixelPerfect",
-        deployment: "",
+        github: "https://github.com/ASproson/css_pixel_perfect",
+        deployment: "https://asproson.github.io/css_pixel_perfect/",
       },
     ],
     img: valorant,
