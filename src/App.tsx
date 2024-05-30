@@ -152,9 +152,9 @@ const Card = ({ name, description, tags, links, img, alt }: CardProps) => {
           <p className="mt-4">{description}</p>
         </div>
       </div>
-      <div className="flex justify-between my-6 px-4">
+      <div className="my-6 px-4">
         {links.map((link, idx) => (
-          <div key={idx}>
+          <div key={idx} className="w-full flex justify-between">
             <Button name="GitHub" link={link.github} />
             {link.deployment && (
               <Button name="Deployment" link={link.deployment} />
